@@ -103,8 +103,8 @@ Set it to `FALSE` to omit the box entirely while retaining any other requested p
 - [Output files](docs/OUTPUTS.md)
 - [Example data](example-data/README.md)
 - [Contributing](CONTRIBUTING.md)
-- [Disclaimer](DISCLAIMER.md)
-- [Code of conduct](code-of-conduct.md)
+- [Disclaimer](https://github.com/CDCgov/template/blob/main/DISCLAIMER.md)
+- [Code of conduct](https://github.com/CDCgov/template/blob/main/code-of-conduct.md)
 
 ## Citation
 
@@ -126,7 +126,7 @@ The source code is distributed in the hope that it will be useful, but without w
 
 ## Privacy standard notice
 
-This repository contains only non-sensitive, publicly available data and information. Do not submit or store personally identifiable information, protected health information, sensitive laboratory information, or other non-public data. See the [`DISCLAIMER`](DISCLAIMER.md) and [`code of conduct`](code-of-conduct.md).
+This repository contains only non-sensitive, publicly available data and information. Do not submit or store personally identifiable information, protected health information, sensitive laboratory information, or other non-public data. See the [Disclaimer](https://github.com/CDCgov/template/blob/main/DISCLAIMER.md) and [Code of Conduct](https://github.com/CDCgov/template/blob/main/code-of-conduct.md).
 
 ## Contributing standard notice
 
