@@ -1,75 +1,142 @@
-# CDCgov GitHub Organization Open Source Project Template
+# DirectViewFRA
 
-**Template for clearance: This project serves as a template to aid projects in starting up and moving through clearance procedures. To start, create a new repository and implement the required [open practices](open_practices.md), train on and agree to adhere to the organization's [rules of behavior](rules_of_behavior.md), and [send a request through the create repo form](https://forms.office.com/Pages/ResponsePage.aspx?id=aQjnnNtg_USr6NJ2cHf8j44WSiOI6uNOvdWse4I-C2NUNk43NzMwODJTRzA4NFpCUk1RRU83RTFNVi4u) using language from this template as a Guide.**
+> **As a first step, this document is under governance review. When the review completes as appropriate per local and agency processes, the project team will be allowed to remove this notice. This material is draft.**
 
-**General disclaimer** This repository was created for use by CDC programs to collaborate on public health related projects in support of the [CDC mission](https://www.cdc.gov/about/cdc/#cdc_about_cio_mission-our-mission).  GitHub is not hosted by the CDC, but is a third party website used by CDC and its partners to share information and collaborate on software. CDC use of GitHub does not imply an endorsement of any one particular service, product, or enterprise. 
+DirectViewFRA is an R workflow for analysis of per-well focus counts from the DirectView focus reduction assay for influenza neutralizing antibodies. The workflow performs virus-control normalization, four-parameter log-logistic fitting, NT50 estimation, quality-control review, and configurable plot and CSV export.
 
-## Access Request, Repo Creation Request
+**Software version:** 1.0.0
 
-* [CDC GitHub Open Project Request Form](https://forms.office.com/Pages/ResponsePage.aspx?id=aQjnnNtg_USr6NJ2cHf8j44WSiOI6uNOvdWse4I-C2NUNk43NzMwODJTRzA4NFpCUk1RRU83RTFNVi4u) _[Requires a CDC Office365 login, if you do not have a CDC Office365 please ask a friend who does to submit the request on your behalf. If you're looking for access to the CDCEnt private organization, please use the [GitHub Enterprise Cloud Access Request form](https://forms.office.com/Pages/ResponsePage.aspx?id=aQjnnNtg_USr6NJ2cHf8j44WSiOI6uNOvdWse4I-C2NUQjVJVDlKS1c0SlhQSUxLNVBaOEZCNUczVS4u).]_
+## Responsible team
 
-## Related documents
+- **Point of contact:** Bin Zhou (Lead and Technical Contact), Influenza Division, National Center for Immunization and Respiratory Diseases, CDC — bzhou@cdc.gov
+- **Analysis code:** Michael Currier, Influenza Division, CDC
 
-* [Open Practices](open_practices.md)
-* [Rules of Behavior](rules_of_behavior.md)
-* [Thanks and Acknowledgements](thanks.md)
-* [Disclaimer](DISCLAIMER.md)
-* [Contribution Notice](CONTRIBUTING.md)
-* [Code of Conduct](code-of-conduct.md)
+Please confirm and update this section to reflect the current responsible individual(s) before clearance.
 
-## Overview
+## What the workflow does
 
-Describe the purpose of your project. Add additional sections as necessary to help collaborators and potential collaborators understand and use your project.
-  
-## Public Domain Standard Notice
-This repository constitutes a work of the United States Government and is not
-subject to domestic copyright protection under 17 USC § 105. This repository is in
-the public domain within the United States, and copyright and related rights in
-the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
-All contributions to this repository will be released under the CC0 dedication. By
-submitting a pull request you are agreeing to comply with this waiver of
-copyright interest.
+- Accepts a raw per-well focus-count CSV, with an optional plate-layout lookup CSV.
+- Supports multiple viruses on a physical plate and matches virus controls by virus-specific metadata.
+- Uses plate- and virus-matched virus controls whenever they are available.
+- The included hardcoded example enables same-virus cross-plate controls for diagnostic normalization and plotting when a plate-matched control is absent; cross-plate results remain non-reportable unless separate reporting permission is enabled.
+- Calculates an LL4 NT50 and an independent observed-value uniroot NT50 when the data support each method.
+- Does not promote an extrapolated NT50 when the observed dilution series does not bracket the selected threshold.
+- Fits an unconstrained LL4 first, then refits only the affected curve with Hill fixed at 1.0 when the initial Hill estimate is outside 0.5-2.0.
+- Writes one comprehensive curve-level result CSV plus per-well, dilution-summary, normalization-QC, run-summary, and plot-manifest files.
+- Runs one or more explicitly enabled plot branches, each in its own output folder.
 
-## License Standard Notice
-The repository utilizes code licensed under the terms of the Apache Software
-License and therefore is licensed under ASL v2 or later.
+## Quick start
 
-This source code in this repository is free: you can redistribute it and/or modify it under
-the terms of the Apache Software License version 2, or (at your option) any
-later version.
+The repository is arranged so the default settings run the included example:
 
-This source code in this repository is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the Apache Software License for more details.
+```text
+DirectViewFRA/
+  directview_fra_analysis.R
+  example-data/
+    mixed_quality_example_raw_counts.csv
+    mixed_quality_example_ll4_fit_curve.csv
+```
 
-You should have received a copy of the Apache Software License along with this
-program. If not, see http://www.apache.org/licenses/LICENSE-2.0.html
+Install the required R packages:
 
-The source code forked from other open source projects will inherit its license.
+```r
+install.packages(c("drc", "dplyr", "ggplot2", "readr", "scales", "tibble"))
+```
 
-## Privacy Standard Notice
-This repository contains only non-sensitive, publicly available data and
-information. All material and community participation is covered by the
-[Disclaimer](DISCLAIMER.md)
-and [Code of Conduct](code-of-conduct.md).
-For more information about CDC's privacy policy, please visit [http://www.cdc.gov/other/privacy.html](https://www.cdc.gov/other/privacy.html).
+### Jupyter or RStudio
 
-## Contributing Standard Notice
-Anyone is encouraged to contribute to the repository by [forking](https://help.github.com/articles/fork-a-repo)
-and submitting a pull request. (If you are new to GitHub, you might start with a
-[basic tutorial](https://help.github.com/articles/set-up-git).) By contributing
-to this project, you grant a world-wide, royalty-free, perpetual, irrevocable,
-non-exclusive, transferable license to all users under the terms of the
-[Apache Software License v2](http://www.apache.org/licenses/LICENSE-2.0.html) or
-later.
+```r
+source("directview_fra_analysis.R")
+results <- run_directview_fra()
+```
 
-All comments, messages, pull requests, and other submissions received through
-CDC including this GitHub page may be subject to applicable federal law, including but not limited to the Federal Records Act, and may be archived. Learn more at [http://www.cdc.gov/other/privacy.html](http://www.cdc.gov/other/privacy.html).
+The settings block near the top of the script is enabled by default:
 
-## Records Management Standard Notice
-This repository is not a source of government records, but is a copy to increase
-collaboration and collaborative potential. All government records will be
-published through the [CDC web site](http://www.cdc.gov).
+```r
+USE_HARDCODED_SETTINGS <- TRUE
+```
 
-## Additional Standard Notices
-Please refer to [CDC's Template Repository](https://github.com/CDCgov/template) for more information about [contributing to this repository](https://github.com/CDCgov/template/blob/main/CONTRIBUTING.md), [public domain notices and disclaimers](https://github.com/CDCgov/template/blob/main/DISCLAIMER.md), and [code of conduct](https://github.com/CDCgov/template/blob/main/code-of-conduct.md).
+Edit `HARDCODED_SETTINGS` to select files, normalization rules, analysis settings, optional QC thresholds, and plot branches.
+
+### Command line
+
+```sh
+Rscript directview_fra_analysis.R \
+  --use-hardcoded-settings false \
+  --input-folder /path/to/input \
+  --raw-counts "Raw Counts.csv" \
+  --output-dir results
+```
+
+Explicit command-line values override the selected starting configuration. Run the following for all recognized command-line options:
+
+```sh
+Rscript directview_fra_analysis.R --help
+```
+
+## Important analysis rules
+
+The primary reporting method is selected once for the run. Both calculated method values remain available in `analysis_results.csv`, but the workflow does not silently switch the reporting method for individual curves.
+
+Plate- and virus-matched controls are preferred. In the included hardcoded example, `allow_cross_plate_virus_controls = TRUE` keeps curves visible for diagnostic review when a matched control is absent. The separate `allow_cross_plate_vc_for_reporting` setting remains `FALSE`, so those calculations do not pass the reporting gate. The built-in command-line defaults remain plate-only unless cross-plate use is explicitly enabled.
+
+The observed-value uniroot method evaluates the complete ordered dilution-mean series for threshold crossings. It reports a value only when there is one unique in-range crossing and performs no interval extension beyond the two adjacent observed dilution means containing that crossing.
+
+Review the individual well values, curve plots, normalization source, and quality-control flags before reporting an NT50.
+
+## Plot controls
+
+Each plot branch has independent settings. Plot files are written with an explicit `.png` or `.pdf` filename extension and graphics device. The default `y_axis = "data"` displays the full plotted range; set `y_axis = "fixed"` to apply `y_limits` instead.
+
+The top-right LL4/uniroot detail box is controlled by:
+
+```r
+show_comparison_details = TRUE
+```
+
+Set it to `FALSE` to omit the box entirely while retaining any other requested plot elements, such as fitted curves, NT50 lines, confidence intervals, points, and captions. From the command line, `--show-comparison-details false` applies the setting to all configured branches.
+
+## Documentation
+
+- [Start here](START_HERE.md)
+- [Detailed usage](docs/USAGE.md)
+- [Input files](docs/INPUT_FORMAT.md)
+- [Output files](docs/OUTPUTS.md)
+- [Example data](example-data/README.md)
+- [Contributing](CONTRIBUTING.md)
+- [Disclaimer](DISCLAIMER.md)
+- [Code of conduct](code-of-conduct.md)
+
+## Citation
+
+When using this workflow, cite the software repository and the DirectView-FRA method publication:
+
+Feng C, Rowe T, Currier M, Dong R, Huang Y, Atteberry G, Wang L, Hatta M, Davis CT, Wentworth DE, Zhou B. *A DirectView focus reduction assay for high-throughput quantification of neutralizing antibodies against influenza A and B viruses.* Cell Reports Methods. 2026;101479. doi:10.1016/j.crmeth.2026.101479.
+
+Citation metadata are also provided in [`CITATION.cff`](CITATION.cff).
+
+## Public domain standard notice
+
+This repository constitutes a work of the United States Government and is not subject to domestic copyright protection under 17 USC § 105. This repository is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/). All contributions to this repository will be released under the CC0 dedication. By submitting a pull request, you agree to comply with this waiver of copyright interest.
+
+## License standard notice
+
+The source code is licensed under the Apache Software License, Version 2.0 or later. See [`LICENSE`](LICENSE).
+
+The source code is distributed in the hope that it will be useful, but without warranty of any kind, including any implied warranty of merchantability or fitness for a particular purpose.
+
+## Privacy standard notice
+
+This repository contains only non-sensitive, publicly available data and information. Do not submit or store personally identifiable information, protected health information, sensitive laboratory information, or other non-public data. See the [`DISCLAIMER`](DISCLAIMER.md) and [`code of conduct`](code-of-conduct.md).
+
+## Contributing standard notice
+
+Anyone is encouraged to contribute by [forking](https://help.github.com/articles/fork-a-repo) and submitting a pull request. By contributing, you grant a world-wide, royalty-free, perpetual, irrevocable, non-exclusive, transferable license to all users under the terms of the [Apache Software License v2](http://www.apache.org/licenses/LICENSE-2.0.html) or later. All submissions received through CDC GitHub may be subject to applicable federal law, including the Federal Records Act, and may be archived. See [`CONTRIBUTING`](CONTRIBUTING.md).
+
+## Records management standard notice
+
+This repository is not a source of government records, but is a copy intended to increase collaboration and collaborative potential. Government records are maintained through applicable CDC records-management processes.
+
+## Additional standard notices
+
+Please refer to [CDC's Template Repository](https://github.com/CDCgov/template) for more information about contributing, public domain notices and disclaimers, and the code of conduct.
