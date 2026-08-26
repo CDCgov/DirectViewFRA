@@ -1,6 +1,14 @@
 # Thanks and Acknowledgements
 
-Starting this file way too late, but wanted to recognize contributions made by people who helped this repo. There are many more than this, but I should have started this file years ago.
+We thank the following individuals for technical support in the development and validation of the DirectView-FRA method and analysis workflow:
 
-* Chris Sandlin [@cssandlin](https://github.com/cssandlin)
-* Drewry Morris [@drewry](https://github.com/drewry)
+- Ryan Dong
+- Ying Huang
+- Ginger Atteberry
+- Li Wang
+- Masato Hatta
+- Jeremy Duke
+
+This study was funded by the US Centers for Disease Control and Prevention (CDC). The findings and conclusions are those of the authors and do not necessarily represent the official position of the US CDC.
+
+Please add any additional contributors who should be recognized.
