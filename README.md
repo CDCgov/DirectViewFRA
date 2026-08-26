@@ -8,10 +8,9 @@ DirectViewFRA is an R workflow for analysis of per-well focus counts from the Di
 
 ## Responsible team
 
-- **Point of contact:** Bin Zhou (Lead and Technical Contact), Influenza Division, National Center for Immunization and Respiratory Diseases, CDC — bzhou@cdc.gov
-- **Analysis code:** Michael Currier, Influenza Division, CDC
+- **Main point of contact:** Bin Zhou (Lead and Technical Contact), Influenza Division, National Center for Immunization and Respiratory Diseases, CDC — bzhou@cdc.gov
+- **Code/programming contact:** Michael Currier, Influenza Division, National Center for Immunization and Respiratory Diseases, CDC — ovn5@cdc.gov
 
-Please confirm and update this section to reflect the current responsible individual(s) before clearance.
 
 ## What the workflow does
 
