@@ -35,7 +35,7 @@ Both values are required for rows classified as samples. Explicitly designated c
 | `control_type` | `control_type`, `control_designation`, `well_type`, `sample_type` | Accepted values include `sample`, `virus_control`, `VC`, `cell_control`, and `CC`. |
 | `reading_datetime` | `reading_date_time`, `reading_datetime`, `read_datetime` | Retained as input metadata when supplied. |
 
-When `control_type` is absent, the script infers controls from `well_id` or the sample name using `VC`, `Virus Control`, `CC`, or `Cell Control` conventions. An explicit control designation that conflicts with those names causes the run to stop for review.
+When `control_type` is absent, the script infers controls from `well_id` or the sample name using `VC`, `Virus Control`, `CC`, or `Cell Control` conventions. **An explicit control designation that conflicts with those names causes the run to stop for review.**
 
 ### Raw-data validation
 
