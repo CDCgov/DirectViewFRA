@@ -1,38 +1,42 @@
-# Welcome!
-Thank you for contributing to CDC's Open Source projects! If you have any
-questions or doubts, don't be afraid to send them our way. We appreciate all
-contributions, and we are looking forward to fostering an open, transparent, and
-collaborative environment.
+# Contributing to DirectViewFRA
 
-Before contributing, we encourage you to also read our [LICENSE](LICENSE),
-[README](README.md), and
-[code-of-conduct](code-of-conduct.md)
-files, also found in this repository. If you have any inquiries or questions not
-answered by the content of this repository, feel free to [contact us](mailto:surveillanceplatform@cdc.gov).
+Thank you for contributing. Contributions that improve correctness, usability, documentation, testing, and reproducibility are welcome.
 
-## Public Domain
-This project is in the public domain within the United States, and copyright and
-related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
-All contributions to this project will be released under the CC0 dedication. By
-submitting a pull request you are agreeing to comply with this waiver of
-copyright interest.
+Before contributing, read the [`README`](README.md), [`LICENSE`](LICENSE), [`DISCLAIMER`](DISCLAIMER.md), and [`code of conduct`](code-of-conduct.md).
 
-## Requesting Changes
-Our pull request/merging process is designed to give the CDC Surveillance Team
-and other in our space an opportunity to consider and discuss any suggested
-changes. This policy affects all CDC spaces, both on-line and off, and all users
-are expected to abide by it.
+## Protect data and confidentiality
 
-### Open an issue in the repository
-If you don't have specific language to submit but would like to suggest a change
-or have something addressed, you can open an issue in this repository. Team
-members will respond to the issue as soon as possible.
+Only non-sensitive, publicly releasable information may be submitted. Do not include personally identifiable information, protected health information, non-public laboratory identifiers, credentials, internal infrastructure details, or restricted data in issues, pull requests, screenshots, logs, or example files.
 
-### Submit a pull request
-If you would like to contribute, please submit a pull request. In order for us
-to merge a pull request, it must:
-   * Be at least seven days old. Pull requests may be held longer if necessary
-     to give people the opportunity to assess it.
-   * Receive a +1 from a majority of team members associated with the request.
-     If there is significant dissent between the team, a meeting will be held to
-     discuss a plan of action for the pull request.
+Use synthetic or fully cleared example data when reproducing a problem.
+
+## Report a problem
+
+Open a GitHub issue and include:
+
+- the operating system;
+- R and package versions;
+- whether hardcoded or command-line settings were used;
+- the relevant settings, with sensitive paths and identifiers removed;
+- the exact error or unexpected behavior; and
+- a minimal, non-sensitive example when possible.
+
+## Submit a pull request
+
+A pull request should:
+
+- explain the analytical or usability problem addressed;
+- preserve the documented output schema unless a schema change is intentional and documented;
+- add or update tests for changed behavior;
+- update user documentation when settings, inputs, outputs, or reporting rules change;
+- avoid duplicate calculated fields or undocumented fallback behavior;
+- preserve Windows and Linux path compatibility; and
+- confirm that no sensitive information is included.
+
+For changes to normalization, NT50 calculation, reportability, or quality-control behavior, describe the scientific rationale and include representative test cases for well-behaved, non-bracketing, irregular, and failed-fit curves as applicable.
+
+## Public domain
+
+This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/). All contributions will be released under the CC0 dedication. By submitting a pull request, you agree to comply with this waiver of copyright interest.
+
+Source-code contributions are also made available under the Apache Software License, Version 2.0 or later, as described in [`LICENSE`](LICENSE).
