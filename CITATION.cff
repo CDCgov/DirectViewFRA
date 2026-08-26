@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the DirectView-FRA method publication."
+title: "DirectViewFRA: R workflow for DirectView focus reduction assay analysis"
+type: software
+version: 1.0.0
+repository-code: "https://github.com/CDCgov/DirectViewFRA"
+license: Apache-2.0
+authors:
+  - family-names: Currier
+    given-names: Michael
+    affiliation: "Influenza Division, National Center for Immunization and Respiratory Diseases, Centers for Disease Control and Prevention"
+  - family-names: Feng
+    given-names: Chenchen
+    affiliation: "Influenza Division, National Center for Immunization and Respiratory Diseases, Centers for Disease Control and Prevention"
+  - family-names: Zhou
+    given-names: Bin
+    affiliation: "Influenza Division, National Center for Immunization and Respiratory Diseases, Centers for Disease Control and Prevention"
+keywords:
+  - influenza
+  - neutralization assay
+  - focus reduction assay
+  - dose-response
+  - R
+preferred-citation:
+  type: article
+  title: "A DirectView focus reduction assay for high-throughput quantification of neutralizing antibodies against influenza A and B viruses"
+  authors:
+    - family-names: Feng
+      given-names: Chenchen
+    - family-names: Rowe
+      given-names: Thomas
+    - family-names: Currier
+      given-names: Michael
+    - family-names: Dong
+      given-names: Ryan
+    - family-names: Huang
+      given-names: Ying
+    - family-names: Atteberry
+      given-names: Ginger
+    - family-names: Wang
+      given-names: Li
+    - family-names: Hatta
+      given-names: Masato
+    - family-names: Davis
+      given-names: C. Todd
+    - family-names: Wentworth
+      given-names: David E.
+    - family-names: Zhou
+      given-names: Bin
+  journal: "Cell Reports Methods"
+  year: 2026
+  doi: "10.1016/j.crmeth.2026.101479"
