@@ -2,7 +2,7 @@
 
 Thank you for contributing. Contributions that improve correctness, usability, documentation, testing, and reproducibility are welcome.
 
-Before contributing, read the [`README`](README.md), [`LICENSE`](LICENSE), [`DISCLAIMER`](DISCLAIMER.md), and [`code of conduct`](code-of-conduct.md).
+Before contributing, read the [`README`](README.md), [`LICENSE`](LICENSE), the [Disclaimer](https://github.com/CDCgov/template/blob/main/DISCLAIMER.md), and the [Code of Conduct](https://github.com/CDCgov/template/blob/main/code-of-conduct.md).
 
 ## Protect data and confidentiality
 
