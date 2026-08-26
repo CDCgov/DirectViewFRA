@@ -1,7 +1,5 @@
 # DirectViewFRA
 
-> **As a first step, this document is under governance review. When the review completes as appropriate per local and agency processes, the project team will be allowed to remove this notice. This material is draft.**
-
 DirectViewFRA is an R workflow for analysis of per-well focus counts from the DirectView focus reduction assay for influenza neutralizing antibodies. The workflow performs virus-control normalization, four-parameter log-logistic fitting, NT50 estimation, quality-control review, and configurable plot and CSV export.
 
 **Software version:** 1.0.0
