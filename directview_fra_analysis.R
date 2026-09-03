@@ -33,6 +33,12 @@
 SCRIPT_VERSION <- "1.0.0"
 MIN_R_VERSION <- "4.1.0"
 
+# The following libraries are required: drc, dplyr, ggplot2, readr, 
+# scales, and tibble. The lack of aatached packages is an intentional design 
+# choice, and instead fully qualified package calls are used throughout.  This
+# was to make it simplier for handling certain errors for novice users.  Look
+# to the function `check_required_packages` if you would like to edit this behavior
+# in any local deployment. 
 
 # =============================================================================
 # CONFIGURATION SOURCE
