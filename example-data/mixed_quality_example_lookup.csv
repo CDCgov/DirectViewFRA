@@ -1,0 +1,49 @@
+Plate ID,Plate Number,Well ID,Virus,Serum,Control Type
+P1V1,Plate 01,CC,V1_H1N2v Example 1,Cell Control,cell_control
+P1V1,Plate 01,VC,V1_H1N2v Example 1,Virus Control,virus_control
+P1V1,Plate 01,Sera1,V1_H1N2v Example 1,2018-093,sample
+P1V1,Plate 01,Sera2,V1_H1N2v Example 1,2018-094,sample
+P2V1,Plate 02,CC,V1_H1N2v Example 1,Cell Control,cell_control
+P2V1,Plate 02,VC,V1_H1N2v Example 1,Virus Control,virus_control
+P2V1,Plate 02,Sera1,V1_H1N2v Example 1,CDC-23-A,sample
+P2V1,Plate 02,Sera2,V1_H1N2v Example 1,CDC-23-B,sample
+P3V1,Plate 03,CC,V1_H1N2v Example 1,Cell Control,cell_control
+P3V1,Plate 03,VC,V1_H1N2v Example 1,Virus Control,virus_control
+P3V1,Plate 03,Sera1,V1_H1N2v Example 1,2025-085,sample
+P3V1,Plate 03,Sera2,V1_H1N2v Example 1,2025-086,sample
+P1V2,Plate 04,CC,V2_H1N2v  Example 2,Cell Control,cell_control
+P1V2,Plate 04,VC,V2_H1N2v  Example 2,Virus Control,virus_control
+P1V2,Plate 04,Sera1,V2_H1N2v  Example 2,2018-093,sample
+P1V2,Plate 04,Sera2,V2_H1N2v  Example 2,2018-094,sample
+P2V2,Plate 05,CC,V2_H1N2v  Example 2,Cell Control,cell_control
+P2V2,Plate 05,VC,V2_H1N2v  Example 2,Virus Control,virus_control
+P2V2,Plate 05,Sera1,V2_H1N2v  Example 2,CDC-23-A,sample
+P2V2,Plate 05,Sera2,V2_H1N2v  Example 2,CDC-23-B,sample
+P3V2,Plate 06,CC,V2_H1N2v  Example 2,Cell Control,cell_control
+P3V2,Plate 06,VC,V2_H1N2v  Example 2,Virus Control,virus_control
+P3V2,Plate 06,Sera1,V2_H1N2v  Example 2,2025-085,sample
+P3V2,Plate 06,Sera2,V2_H1N2v  Example 2,2025-086,sample
+P1V3,Plate 07,CC,V3_H1N2v Example 3,Cell Control,cell_control
+P1V3,Plate 07,VC,V3_H1N2v Example 3,Virus Control,virus_control
+P1V3,Plate 07,Sera1,V3_H1N2v Example 3,2018-093,sample
+P1V3,Plate 07,Sera2,V3_H1N2v Example 3,2018-094,sample
+P2V3,Plate 08,CC,V3_H1N2v Example 3,Cell Control,cell_control
+P2V3,Plate 08,VC,V3_H1N2v Example 3,Virus Control,virus_control
+P2V3,Plate 08,Sera1,V3_H1N2v Example 3,CDC-23-A,sample
+P2V3,Plate 08,Sera2,V3_H1N2v Example 3,CDC-23-B,sample
+P3V3,Plate 09,CC,V3_H1N2v Example 3,Cell Control,cell_control
+P3V3,Plate 09,VC,V3_H1N2v Example 3,Virus Control,virus_control
+P3V3,Plate 09,Sera1,V3_H1N2v Example 3,2025-085,sample
+P3V3,Plate 09,Sera2,V3X2_H1N2v Example 3,2025-086,sample
+P1V3 x2,Plate 10,CC,V3X2_H1N2v Example 3,Cell Control,cell_control
+P1V3 x2,Plate 10,VC,V3X2_H1N2v Example 3,Virus Control,virus_control
+P1V3 x2,Plate 10,Sera1,V3X2_H1N2v Example 3,2018-093,sample
+P1V3 x2,Plate 10,Sera2,V3X2_H1N2v Example 3,2018-094,sample
+P2V3 x2,Plate 11,CC,V3X2_H1N2v Example 3,Cell Control,cell_control
+P2V3 x2,Plate 11,VC,V3X2_H1N2v Example 3,Virus Control,virus_control
+P2V3 x2,Plate 11,Sera1,V3X2_H1N2v Example 3,CDC-23-A,sample
+P2V3 x2,Plate 11,Sera2,V3X2_H1N2v Example 3,CDC-23-B,sample
+P3V3 x2,Plate 12,CC,V3X2_H1N2v Example 3,Cell Control,cell_control
+P3V3 x2,Plate 12,VC,V3X2_H1N2v Example 3,Virus Control,virus_control
+P3V3 x2,Plate 12,Sera1,V3X2_H1N2v Example 3,2025-085,sample
+P3V3 x2,Plate 12,Sera2,V3X2_H1N2v Example 3,2025-086,sample
