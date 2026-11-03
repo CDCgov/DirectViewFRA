@@ -31,21 +31,24 @@ Keep the CSVs in the configured `input_folder`. Filenames are resolved relative 
 For the default raw-count-only example:
 
 ```r
-input = list(
+set_working_directory_to_script_folder = TRUE,
+input_folder = "example-data"
+
   raw_counts_file = "mixed_quality_example_raw_counts.csv",
   lookup_file = NULL,
   gen5_fits_file = NULL
-)
 ```
 
 For the example using both optional inputs:
 
 ```r
-input = list(
+set_working_directory_to_script_folder = TRUE,
+input_folder = "example-data"
+
   raw_counts_file = "mixed_quality_example_raw_counts.csv",
   lookup_file = "mixed_quality_example_lookup.csv",
   gen5_fits_file = "mixed_quality_example_ll4_fit_curve.csv"
-)
+
 ```
 
 ## Expected output archives
