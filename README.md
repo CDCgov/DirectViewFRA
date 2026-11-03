@@ -75,7 +75,7 @@ Rscript directview_fra_analysis.R --help
 
 The primary reporting method is selected once for the run. Both calculated method values remain available in `analysis_results.csv`, but the workflow does not silently switch the reporting method for individual curves.
 
-Plate- and virus-matched controls are preferred. In the included hardcoded example, `allow_cross_plate_virus_controls = TRUE` keeps curves visible for diagnostic review when a matched control is absent. The separate `allow_cross_plate_vc_for_reporting` setting remains `FALSE`, so those calculations do not pass the reporting gate. The built-in command-line defaults remain plate-only unless cross-plate use is explicitly enabled.
+Plate- and virus-matched controls are preferred. In the included hardcoded example, `allow_cross_plate_virus_controls = FALSE` prevents the creation of curves for diagnostic review when a matched control is absent. The separate `allow_cross_plate_vc_for_reporting` setting, defaulting to `FALSE`, controls if those calculations can pass the reporting gate. The built-in command-line defaults remain plate-only unless cross-plate use is explicitly enabled.  These values can be reversed with the example data to demonstrate the expected behavior. 
 
 The observed-value uniroot method evaluates the complete ordered dilution-mean series for threshold crossings. It reports a value only when there is one unique in-range crossing and performs no interval extension beyond the two adjacent observed dilution means containing that crossing.
 
