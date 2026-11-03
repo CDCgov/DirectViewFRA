@@ -1,4 +1,4 @@
-Curve Name,Name,Curve Formula,A,B,C,D,R2,Fit F Prob,Plate Number,Plate ID,Virus,Global.Name
+Curve Name,Name,Curve Formula,A,B,C,D,R2,Fit F Prob,Plate Number,Plate ID,Virus,Serum
 DRCurve_Sera1,Sera1,Y = (A-D)/(1+(X/C)^B) + D,-1.27829,1.35595,1298.54,364.626,0.987665,0.177,Plate 01,P1V1,V1_H1N2v Example 1,2018-093
 DRCurve_Sera2,Sera2,Y = (A-D)/(1+(X/C)^B) + D,-1.8877,1.60513,301.683,336.502,0.986298,0.821,Plate 01,P1V1,V1_H1N2v Example 1,2018-094
 DRCurve_Sera1,Sera1,Y = (A-D)/(1+(X/C)^B) + D,5.12953,1.49003,538.342,366.892,0.990233,0.679,Plate 02,P2V1,V1_H1N2v Example 1,CDC-23-A
