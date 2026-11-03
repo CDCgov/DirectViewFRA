@@ -1,4 +1,4 @@
-Well ID,Name,Well,Conc/Dil,Cell.Count,Count,Mean,Std Dev,CV (%),Plate ID,Plate Number,Reading Date/Time,Virus,Global.Name
+Well ID,Name,Well,Conc/Dil,Cell.Count,Count,Mean,Std Dev,CV (%),Plate ID,Plate Number,Reading Date/Time,Virus,Serum
 CC,Cell Control,A12,NA,3,8,2,1,68.599,P1V1,Plate 01,8/21/2026 15:57,V1_H1N2v Example 1,Cell Control
 CC,Cell Control,B12,NA,3,,,,,P1V1,Plate 01,8/21/2026 15:57,V1_H1N2v Example 1,Cell Control
 CC,Cell Control,C12,NA,2,,,,,P1V1,Plate 01,8/21/2026 15:57,V1_H1N2v Example 1,Cell Control
