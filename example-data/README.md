@@ -20,8 +20,6 @@ The script joins the lookup to the raw counts using `Plate ID` and `Well ID`. He
 
 The lookup must cover every raw-count mapping, including controls. It can supply missing metadata; conflicting nonblank values between the raw counts and lookup cause the run to stop for review.
 
-If the downloaded filename is `mixed_quality_example_lookup(1).csv`, rename it to `mixed_quality_example_lookup.csv` before using the settings below.
-
 ### `mixed_quality_example_ll4_fit_curve.csv`
 
 Optional commercial imaging-system software fit export, validated using Agilent Gen5 software. The default analysis does not read this file because `gen5_fits_file = NULL`. When enabled, it supplies external fit coefficients and comparison results alongside the R-derived estimates.
