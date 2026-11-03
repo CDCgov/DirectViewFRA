@@ -24,7 +24,7 @@ These fields may be present in the raw-count file or supplied through the option
 | Canonical field | Accepted examples |
 |---|---|
 | `virus` | `virus`, `virus_name` |
-| `sample_id` | `global_name`, `sample_id`, `sample`, `sera`, `antibody_id` |
+| `sample_id` | `serum`, `global_name`, `sample_id`, `sample`, `sera`, `antibody_id` |
 
 Both values are required for rows classified as samples. Explicitly designated control rows may omit sample or virus text when control assignment can be resolved from the other metadata.
 
@@ -58,7 +58,7 @@ Required lookup fields:
 |---|---|
 | `well_id` | `well_id`, `local_name`, `localname` |
 | `plate_id` | `plate_id`, `plateid` |
-| `sample_id` | `sample_id`, `global_name`, `sera`, `sample`, `antibody_id` |
+| `sample_id` | `sample_id`, `serum`, `global_name`, `sera`, `sample`, `antibody_id` |
 | `virus` | `virus`, `virus_name` |
 
 Optional lookup fields:
@@ -85,7 +85,7 @@ Required fields:
 | `plate_number` | `plate_number`, `plate_no`, `platenumber` |
 | `plate_id` | `plate_id`, `plateid` |
 | `virus` | `virus`, `virus_name` |
-| `sample_id` | `global_name`, `sample_id`, `sample`, `sera`, `antibody_id` |
+| `sample_id` | `serum`, `global_name`, `sample_id`, `sample`, `sera`, `antibody_id` |
 
 Optional fields:
 
