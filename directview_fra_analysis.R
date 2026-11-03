@@ -1342,7 +1342,7 @@ raw_aliases <- list(
   plate_id = c("plate_id", "plateid"),
   plate_number = c("plate_number", "plate_no", "platenumber"),
   virus = c("virus", "virus_name"),
-  sample_id = c("global_name", "sample_id", "sample", "sera", "antibody_id"),
+  sample_id = c("serum", "global_name", "sample_id", "sample", "sera", "antibody_id"),
   control_type = c(
     "control_type", "control_designation", "well_type", "sample_type"
   ),
@@ -1353,7 +1353,7 @@ lookup_aliases <- list(
   well_id = c("well_id", "local_name", "localname"),
   plate_id = c("plate_id", "plateid"),
   plate_number = c("plate_number", "plate_no", "platenumber"),
-  sample_id = c("sample_id", "global_name", "sera", "sample", "antibody_id"),
+  sample_id = c("serum", "sample_id", "global_name", "sera", "sample", "antibody_id"),
   virus = c("virus", "virus_name"),
   control_type = c(
     "control_type", "control_designation", "well_type", "sample_type"
@@ -1373,7 +1373,7 @@ gen5_aliases <- list(
   plate_number = c("plate_number", "plate_no", "platenumber"),
   plate_id = c("plate_id", "plateid"),
   virus = c("virus", "virus_name"),
-  sample_id = c("global_name", "sample_id", "sample", "sera", "antibody_id")
+  sample_id = c("serum", "global_name", "sample_id", "sample", "sera", "antibody_id")
 )
 
 standardize_raw_counts <- function(path) {
